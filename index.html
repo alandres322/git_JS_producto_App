@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios moto</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css"> 
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand mx-auto text-center" href="#">Tienda virtual Moto Accesorios Alvaro Andres</a>
+    </nav>
+     <!--Crea un contenedor Bootstrap para organizar el contenido en la página-->
+    <div class="container">
+        <!--Define un contenedor con el ID App, que usa la clase row para organizar el contenido en filas y pt-5 para agregar espacio superior-->
+        <div id="App" class="row pt-3">
+            <!--Se crea una columna de 4 de ancho, lo que indica que este bloque ocupará aproximadamente el 33% del ancho-->
+            <div class="col-md-5">
+                <!--Dentro de esta columna hay una clase que servirá para contener el formulario-->
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Adicionar un Producto</h4>
+                    </div>
+                        <!--Se usa un formulario para capturar datos de un producto-->
+                        <form id="form_productos" class="card-body">
+                            <!--Contiene 3 campos de entrada y un botón de envío (Grabar)-->
+                            <div class="form-group">
+                                <input type="text" id="nombre" placeholder="Nombre del Producto"
+                                class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="precio" step="0.01" placeholder="Precio del Producto"
+                                class="form-control">                  
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="año" min="1933" max="2033" step="1" placeholder="Año del Producto"
+                                class="form-control">                            
+                            </div>                             
+                            <input type="submit" value="Grabar" class="btn btn-primary w-100">
+                        </form>                
+                    </div>
+                </div>
+            </div> 
+            <!--Se crea una columna de 8 de ancho, lo que significa que ocupa el resto del espacio disponible (aprox. 66%)--> 
+            <div id="lista-productos" class="col-md-8">
+        </div>
+    </div> 
+    <script src="App.js" type="module"></script>               
+</body>
+</html>
